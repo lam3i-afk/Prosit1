@@ -1,4 +1,4 @@
-package tn.esprit.gestionzoo.main.entities; // Déclare le package en haut du fichier
+package tn.esprit.gestionzoo.main.entities; 
 
 public class Animal {
 
