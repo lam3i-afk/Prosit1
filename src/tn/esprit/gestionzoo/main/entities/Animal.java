@@ -24,7 +24,7 @@ public String getName() {
 
     public void setAge(int age) {
         if (age < 0) {
-            throw new IllegalArgumentException("L'âge d'un animal ne peut pas être négatif");
+            return
         }
     this.age = age;
     }
