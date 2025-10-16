@@ -1,4 +1,4 @@
-package tn.esprit.gestionzoo.main.entities; // Déclare le package en haut du fichier
+package tn.esprit.gestionzoo.main.entities;
 
 public class Zoo {
     Animal[] animals = new Animal[2];
@@ -11,7 +11,7 @@ public class Zoo {
     }
 
     public Zoo(String name, String city, int nbrCages) {
-        this.name = name;
+        setName(name);
         this.city = city;
         this.nbrCages = nbrCages;
 
@@ -23,7 +23,8 @@ public class Zoo {
     }
     public void setName(String name) {
         if (name == null) {
-            throw new IllegalArgumentException("L'âge d'un animal ne peut pas être négatif");
+            return ;
+
         }
         this.name = name;
     }

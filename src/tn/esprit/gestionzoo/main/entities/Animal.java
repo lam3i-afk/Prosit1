@@ -1,11 +1,11 @@
-package tn.esprit.gestionzoo.main.entities; // Déclare le package en haut du fichier
+package tn.esprit.gestionzoo.main.entities;
 
 public class Animal {
 
-    private String family;
-    private String name;
-    private int age;
-    private boolean isMammal ;
+    protected String family;
+    protected String name;
+    protected int age;
+    protected boolean isMammal ;
 
 public Animal(String family,String name,int age,boolean isMammal) {
     this.family=family;
@@ -14,9 +14,19 @@ public Animal(String family,String name,int age,boolean isMammal) {
     this.isMammal=isMammal;
 
 }
-public String getName() {
+
+    public Animal() {
+
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public String getName() {
     return name;
 }
+
 
     public int getAge() {
         return age;
@@ -24,14 +34,15 @@ public String getName() {
 
     public void setAge(int age) {
         if (age < 0) {
-            throw new IllegalArgumentException("L'âge d'un animal ne peut pas être négatif");
+            return ;
         }
     this.age = age;
     }
 
     public String toString() {
-    return  "family=" + family + ", name=" + name + ", age=" + age  + ", isMammal=" + isMammal;
-}
+        return "Aquatic [name=" + name + ", age=" + age + ", isMammal=" + isMammal + "]";
+    }
+
 
 
 

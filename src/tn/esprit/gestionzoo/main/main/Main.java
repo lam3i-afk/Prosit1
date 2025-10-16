@@ -1,6 +1,11 @@
-package tn.esprit.gestionzoo.main;
+package tn.esprit.gestionzoo.main.main;
 import tn.esprit.gestionzoo.main.entities.Animal;
 import tn.esprit.gestionzoo.main.entities.Zoo;
+import tn.esprit.gestionzoo.main.entities.Aquatic;
+import tn.esprit.gestionzoo.main.entities.Terrestrial;
+import tn.esprit.gestionzoo.main.entities.Dolphin;
+import tn.esprit.gestionzoo.main.entities.Penguin;
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -29,5 +34,29 @@ public class Main {
         System.out.println(myZoo.removeAnimal(lion));
         System.out.println(myZoo.isZooFull());
         System.out.println(Zoo.comparerZoo(myZoo,myZoo2));
+
+
+
+        Aquatic aquatic = new Aquatic();
+        Terrestrial terrestrial = new Terrestrial();
+        Dolphin dolphin = new Dolphin();
+        Penguin penguin = new Penguin();
+
+
+
+        Aquatic aquatic2 = new Aquatic("Fish", "Shark", 8, false, "Ocean");
+        Terrestrial terrestrial2 = new Terrestrial("Mammal", "Lion", 5, true, 4);
+        Dolphin dolphin2 = new Dolphin("Mammal", "Dolphin", 6, true, "Sea", 25.4f);
+        Penguin penguin2 = new Penguin("Bird", "Penguin", 3, false, "Antarctica", 15.2f);
+
+        System.out.println(aquatic2);
+        System.out.println(terrestrial2);
+        System.out.println(dolphin2);
+        System.out.println(penguin2);
+
+        aquatic2.swim();
+        dolphin2.swim();
+        penguin2.swim();
+
     }
     }
